@@ -1,6 +1,6 @@
 /**
  * Libreria para usar el template Gentella
- * @version v0.0.5
+ * @version v0.0.6
  * @link https://github.com/MobileIA/mia-layout-gentella-angular
  * @author Matias Camiletti <matiascamiletti@mobileia.com> 
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -12,6 +12,7 @@
             .module('miaLayoutGentella', ['mobileiaAuthentication', 'ngAnimate', 'ui.router'])
             .controller('GentellaLoginController', GentellaLoginController)
             .directive('gentellaFooter', gentellaFooter)
+            .directive('gentellaMenu', gentellaMenu)
             .directive('gentellaMenuProfileQuick', gentellaMenuProfileQuick);
     /**
      * Controllers
@@ -46,6 +47,29 @@
     /**
      * Directives
      */
+    function gentellaMenu(){
+        return {
+            restrict: 'EA',
+            replace: true,
+            scope: {
+                items: "="
+            },
+            link: function (scope, element) {
+                
+            },
+            template: '<!-- sidebar menu -->'+
+                '<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">'+
+                    '<div class="menu_section">'+
+                        '<h3>Menu</h3>'+
+                        '<ul class="nav side-menu">'+
+                            '<li ui-sref-active="active" ng-repeat="item in items"><a ui-sref="{{ item.sref }}()"><i class="fa {{ item.icon }}"></i>{{ item.title }}</a></li>'+
+                        '</ul>'+
+                    '</div>'+
+                '</div>'+
+                '<!-- /sidebar menu -->'
+        };
+    };
+    
     function gentellaMenuProfileQuick(){
         return {
             restrict: 'EA',
