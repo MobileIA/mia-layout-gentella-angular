@@ -17,11 +17,16 @@
     function gentellaFooter(){
         return {
             restrict: 'EA',
-            scope: {},
+            replace: true,
+            scope: {
+                text: "@",
+                url: "@",
+                author: "@"
+            },
             link: function (scope, element) {
                 
             },
-            template: '<!-- footer content --><footer><div class="pull-right">Content Manager System by <a href="http://mobileia.com">MobileIA</a></div><div class="clearfix"></div></footer><!-- /footer content -->'
+            template: '<!-- footer content --><footer><div class="pull-right">{{ text }} <a href="{{ url }}">{{ author }}</a></div><div class="clearfix"></div></footer><!-- /footer content -->'
         };
     };
 })();
