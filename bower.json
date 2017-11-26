@@ -1,6 +1,6 @@
 {
   "name": "mia-layout-gentella-angular",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "src/mia-layout-gentella.js",
   "ignore": [
     ".jshintrc",

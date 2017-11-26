@@ -1,6 +1,6 @@
 /**
  * Libreria para usar el template Gentella
- * @version v0.0.4
+ * @version v0.0.5
  * @link https://github.com/MobileIA/mia-layout-gentella-angular
  * @author Matias Camiletti <matiascamiletti@mobileia.com> 
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -11,8 +11,11 @@
     angular
             .module('miaLayoutGentella', ['mobileiaAuthentication', 'ngAnimate', 'ui.router'])
             .controller('GentellaLoginController', GentellaLoginController)
-            .directive('gentellaFooter', gentellaFooter);
-    
+            .directive('gentellaFooter', gentellaFooter)
+            .directive('gentellaMenuProfileQuick', gentellaMenuProfileQuick);
+    /**
+     * Controllers
+     */
     GentellaLoginController.$inject = ['$scope', '$rootScope', 'mobileiaAuth', '$state'];
 
     function GentellaLoginController($scope, $rootScope, mobileiaAuth, $state) {
@@ -40,6 +43,29 @@
             });
         };
     }
+    /**
+     * Directives
+     */
+    function gentellaMenuProfileQuick(){
+        return {
+            restrict: 'EA',
+            replace: true,
+            link: function (scope, element) {
+                
+            },
+            template: '<!-- menu profile quick info -->'+
+                '<div class="profile clearfix">'+
+                    '<div class="profile_pic">'+
+                        '<img src="./template/gentelella/images/img.jpg" alt="..." class="img-circle profile_img">'+
+                    '</div>'+
+                    '<div class="profile_info">'+
+                        '<span>Bienvenido,</span>'+
+                        '<h2>{{ currentUser.firstname }}</h2>'+
+                    '</div>'+
+                '</div>'+
+                '<!-- /menu profile quick info -->'
+        };
+    };
     
     gentellaFooter.$inject = [];
     
