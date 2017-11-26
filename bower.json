@@ -1,23 +1,27 @@
 {
-    "name": "mia-layout-gentella-angular",
-    "version": "0.0.1",
-    "main": "src/mia-layout-gentella.js",
-    "ignore": [
-        ".jshintrc", "**/*.txt"
-    ],
-    "dependencies": {
-    },
-    "devDependencies": {
-    },
-    "homepage": "https://github.com/MobileIA/mia-layout-gentella-angular",
-    "authors": [
-        "Matias Camiletti <matias.camiletti@gmail.com>"
-    ],
-    "description": "Libreria para usar este template.",
-    "keywords": [
-        "layout-gentella",
-        "angularjs",
-        "mobileia"
-    ],
-    "license": "MIT"
+  "name": "mia-layout-gentella-angular",
+  "version": "0.0.1",
+  "main": "src/mia-layout-gentella.js",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "homepage": "https://github.com/MobileIA/mia-layout-gentella-angular",
+  "authors": [
+    "Matias Camiletti <matias.camiletti@gmail.com>"
+  ],
+  "description": "Libreria para usar este template.",
+  "keywords": [
+    "layout-gentella",
+    "angularjs",
+    "mobileia"
+  ],
+  "license": "MIT"
 }
